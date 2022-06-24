@@ -3,7 +3,7 @@ FROM node:lts-alpine as builder
 ENV EVA_ENTRYPOINT=/api
 WORKDIR /
 COPY package.json /
-RUN npm install --registry=https://registry.npm.taobao.org
+RUN npm install 
 RUN npm run build 
 
 FROM nginx:alpine

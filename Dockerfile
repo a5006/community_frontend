@@ -1,4 +1,4 @@
-FROM node:14.18.1-alpine 
+FROM node:lts-alpine
 # env set
 ENV EVA_ENTRYPOINT=/api
 WORKDIR /

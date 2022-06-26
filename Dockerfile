@@ -4,6 +4,7 @@ ENV EVA_ENTRYPOINT=/api
 WORKDIR /
 COPY . .
 RUN npm install && npm run build 
+RUN ls
 FROM nginx:alpine
 COPY  ./dist/ /usr/share/nginx/html/
 EXPOSE 80

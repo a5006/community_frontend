@@ -5,5 +5,5 @@ WORKDIR /
 COPY . .
 RUN npm install && npm run build 
 FROM nginx:alpine
-COPY  --from=Builder /dist/ /usr/share/nginx/html/
+COPY  --from=Builder ./dist/ /usr/share/nginx/html/
 EXPOSE 80
